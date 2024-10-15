@@ -7,26 +7,49 @@ import { GoSearch } from "react-icons/go";
 function Nav_bar() {
   return (
 
-    <div className='grid grid-cols-3 h-20 items-center'>
+    <div className='grid grid-cols-3 h-16 items-center'>
 
-      <FaSpotify size={40}/>
-
-      <div className='flex items-center justify-center space-x-3'>
-        <div className='bg-red-600 rounded-full p-2 flex items-center justify-center'>
-          <button><GoHome size={34}/></button>
-        </div>
-
-        <div className='flex space-x-4 border border-white rounded-full p-2 w-3/4 min-w-36'>
-          <button><GoSearch size={26}/></button>
-
-          <input className="flex-auto max-w-96 bg-transparent outline-none h-7 border-r border-white" type="text" placeholder='¿Qué quieres reproducir?'/>
-
-          <button className=''><FaHeart size={27}/></button>
-        </div>
-
+      {/* Logo */}
+      <div className='flex items-center justify-center sm:justify-start ml-7 -mt-0.5'>
+        <FaSpotify size={33}/>
       </div>
 
-      <div>asjkdhjksad</div>
+      <div className='flex items-center justify-center space-x-2 px-3'>
+        {/* Botón de Home */}
+        <div className='bg-[#212121] rounded-full p-2.5 flex items-center justify-center '>
+            <button>
+              <GoHome size={28}/>
+            </button>
+        </div>
+
+        {/* Contenedor de búsqueda */}
+        <div className='flex items-center justify-center gap-3 bg-[#212121] rounded-full p-2.5  w-[77%]'>
+
+          {/* Botón de búsqueda */}
+          <button className='flex items-center justify-center h-full min-h-4 min-w-4'>
+            <GoSearch size={27}/>
+          </button>
+
+          {/* Input de búsqueda */}
+          <input className="flex bg-transparent outline-none h-6 border-r border-[#B3B3B3] w-[86%] min-w-10" type="text" placeholder='¿Qué quieres reproducir?'/>
+
+          {/* Botón de corazón */}
+          <button className='flex items-center justify-center gap-8 min-h-4 min-w-4'>
+            <FaHeart size={25} className='flex items-center justify-center'/>
+          </button>
+          
+        </div>
+        
+      </div>
+
+      <div className='flex justify-end space-x-8 px-2 '>
+        <button className='text-[#B3B3B3]'>
+            Registrarte
+        </button>
+        <button className='text-[#121212] rounded-full py-3 px-7 bg-[#fff]'>
+            Iniciar Sesión
+        </button>
+      </div>
 
     </div>
   )
