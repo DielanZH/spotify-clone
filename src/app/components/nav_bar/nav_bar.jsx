@@ -7,21 +7,23 @@ import { GoSearch } from "react-icons/go";
 function Nav_bar() {
   return (
 
-    <div className='grid grid-cols-3 h-20'>
+    <div className='grid grid-cols-3 h-20 items-center'>
 
       <FaSpotify size={40}/>
 
-      <div>
-        <div><GoHome size={40}/></div>
-
-        <div className='flex'>
-          <button><GoSearch /></button>
-
-          <input className="flex-auto max-w-96" type="text" placeholder='¿Qué quieres reproducir?'/>
-
-          <button><FaHeart /></button>
-
+      <div className='flex items-center justify-center space-x-3'>
+        <div className='bg-red-600 rounded-full p-2 flex items-center justify-center'>
+          <button><GoHome size={34}/></button>
         </div>
+
+        <div className='flex space-x-4 border border-white rounded-full p-2 w-3/4 min-w-36'>
+          <button><GoSearch size={26}/></button>
+
+          <input className="flex-auto max-w-96 bg-transparent outline-none h-7 border-r border-white" type="text" placeholder='¿Qué quieres reproducir?'/>
+
+          <button className=''><FaHeart size={27}/></button>
+        </div>
+
       </div>
 
       <div>asjkdhjksad</div>
