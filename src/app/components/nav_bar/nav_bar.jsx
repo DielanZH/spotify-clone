@@ -1,10 +1,14 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { FaSpotify } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { FaHeart } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
 
+
 function Nav_bar() {
+  const [onFocus, setOnFocus] = useState(false);
+
   return (
 
     <div className='grid grid-cols-3 h-16 items-center'>
@@ -23,7 +27,7 @@ function Nav_bar() {
         </div>
 
         {/* Contenedor de búsqueda */}
-        <div className='flex items-center justify-center gap-3 bg-[#212121] rounded-full p-2.5  w-[77%] transition-all duration-300 hover:ring-1 hover:ring-[#B3B3B3] hover:border-[#B3B3B3] hover:bg-[#2C2C2C]'>
+        <div className={`flex items-center justify-center gap-3 bg-[#212121] rounded-full p-2.5  w-[77%] transition-all duration-300 ${onFocus? "ring-2 ring-[#B3B3B3] border-[#B3B3B3]": "hover:ring-1 hover:ring-[#B3B3B3] hover:border-[#B3B3B3] hover:bg-[#2C2C2C]"} `}>
 
           {/* Botón de búsqueda */}
           <button className='flex items-center justify-center h-full min-h-4 min-w-4'>
@@ -31,7 +35,11 @@ function Nav_bar() {
           </button>
 
           {/* Input de búsqueda */}
-          <input className="flex bg-transparent outline-none h-6 border-r border-[#B3B3B3] w-[86%] min-w-10" type="text" placeholder='¿Qué quieres reproducir?'/>
+          <input className="flex bg-transparent outline-none h-6 border-r border-[#B3B3B3] w-[86%] min-w-10" type="text" placeholder='¿Qué quieres reproducir?' 
+          onFocus={() => setOnFocus (true)} 
+          onBlur={() => setOnFocus(false)}
+
+          />
 
           {/* Botón de corazón */}
           <button className='flex items-center justify-center min-h-4 min-w-4'>
