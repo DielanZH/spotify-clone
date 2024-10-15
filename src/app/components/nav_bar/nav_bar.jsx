@@ -13,7 +13,7 @@ function Nav_bar() {
 
       <div className='flex items-center justify-center space-x-3'>
         <div className='bg-neutral-900 rounded-full p-2 flex items-center justify-center'>
-          <button><GoHome size={34}/></button>
+          <button><GoHome size={30}/></button>
         </div>
 
         <div className='flex space-x-4 border bg-neutral-900 border-none rounded-full p-2 w-3/4 min-w-36'>

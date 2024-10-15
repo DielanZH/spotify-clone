@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
 
-    <Nav_bar />
+      <Nav_bar />
 
-    <div className="grid grid-cols-2">
-      <Biblioteca />
+      <div className="grid grid-cols-2 px-2 space-x-2">
+        <Biblioteca />
 
-      <Main_page />
-    </div>
-    
+        <Main_page />
+      </div>
+
     </>
   );
 }

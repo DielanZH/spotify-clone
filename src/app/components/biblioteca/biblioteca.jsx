@@ -27,12 +27,12 @@ function Biblioteca() {
           </div>
         </div>
 
-        <div className='flex space-x-16 h-9 mx-4 my-2'>
-          <div className='flex space-x-1 h-8'>
+        <div className='flex space-x-12 h-9 mx-4 my-2'>
+          <div className='flex space-x-2 h-8'>
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Playlist</span></button>
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Artistas</span></button>
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Albumes</span></button>
-            <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Podcast y programas</span></button>
+            <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm whitespace-nowrap'><span>Podcast y programas</span></button>
           </div>
 
           <div className='flex items-center justify-center'>
