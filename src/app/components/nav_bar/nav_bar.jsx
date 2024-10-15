@@ -12,11 +12,11 @@ function Nav_bar() {
       <FaSpotify size={40}/>
 
       <div className='flex items-center justify-center space-x-3'>
-        <div className='bg-red-600 rounded-full p-2 flex items-center justify-center'>
+        <div className='bg-neutral-900 rounded-full p-2 flex items-center justify-center'>
           <button><GoHome size={34}/></button>
         </div>
 
-        <div className='flex space-x-4 border border-white rounded-full p-2 w-3/4 min-w-36'>
+        <div className='flex space-x-4 border bg-neutral-900 border-none rounded-full p-2 w-3/4 min-w-36'>
           <button><GoSearch size={26}/></button>
 
           <input className="flex-auto max-w-96 bg-transparent outline-none h-7 border-r border-white" type="text" placeholder='¿Qué quieres reproducir?'/>
