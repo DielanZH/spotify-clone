@@ -44,8 +44,8 @@ function Nav_bar() {
           />
 
           {/* Botón de corazón */}
-          <button title="Explorar" className='flex items-center justify-center transition-transform duration-200 hover:scale-110 min-h-4 min-w-4'>
-            <FaHeart size={25} className='flex items-center justify-center'/>
+          <button title="Explorar" className='flex items-center px-0.5 pr-1.5 transition-transform duration-200 hover:scale-110 min-h-4 min-w-4'>
+            <FaHeart size={24} className='flex items-center justify-center'/>
           </button>
           
         </div>
