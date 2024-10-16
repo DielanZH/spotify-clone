@@ -11,7 +11,7 @@ function Biblioteca() {
   return (
     <div>
 
-      <div className='bg-neutral-900 h-svh rounded-lg p-0'>
+      <div className='bg-primaryColor h-[77vh] rounded-lg p-0'>
         <div className='flex items-center justify-between pt-3 px-4 pb-2'>
 
           <header className='flex items-center space-x-1'>

@@ -8,7 +8,7 @@ export default function Home() {
 
       <Nav_bar />
 
-      <div className="grid grid-cols-2 px-2 space-x-2">
+      <div className="grid grid-cols-[min-content_auto] grid-rows-[5fr_1fr] px-2 space-x-2">
         <Biblioteca />
 
         <Main_page />
