@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useEffect, useRef, useState } from 'react';
 import { BiLibrary } from "react-icons/bi";
 import { MdAdd } from "react-icons/md";
 import { IoMdArrowBack } from "react-icons/io";
@@ -8,10 +10,28 @@ import { RiListUnordered } from "react-icons/ri";
 
 
 function Biblioteca() {
-  return (
-    <div>
 
-      <div className='bg-primaryColor h-[77vh] rounded-lg p-0'>
+  const [width, setWidth] = useState(450);
+  const isResized = useRef(false);
+
+  useEffect(() => {
+    window.addEventListener("mouseup", () => {
+      isResized.current = false
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (!isResized.current) {
+        return
+      }
+      setWidth((prevWidth) => prevWidth + e.movementX / 2)
+    })
+  }, []);
+
+
+  return (
+    <div className="flex">
+
+      <div className='bg-primaryColor h-[77vh] rounded-lg p-0' style={{ width: `${width / 16}rem` }}>
         <div className='flex items-center justify-between pt-3 px-4 pb-2'>
 
           <header className='flex items-center space-x-1'>
@@ -41,12 +61,23 @@ function Biblioteca() {
 
           </div>
 
-
         </div>
 
+      </div>
 
+      {/*HANDLER */}
+
+      <div className={`${isResized ? 'flex items-center justify-center opacity-0 transition-opacity duration-200 hover:opacity-100 w-2 active:cursor-grabbing hover:cursor-grab' :
+       'flex items-center justify-center w-2'}`}
+
+
+        onMouseDown={() => { isResized.current = true }}>
+        <hr className={`${isResized ? 'active:bg-white' : ''} w-0.5 h-[95%] border-none bg-chipCheckbox`}>
+
+        </hr>
 
       </div>
+
 
     </div>
   )
