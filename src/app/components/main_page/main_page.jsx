@@ -2,7 +2,7 @@ import React from 'react'
 
 function Main_page() {
   return (
-    <div>
+    <div className='bg-primaryColor rounded-lg p-4'>
       asdsada
     </div>
   )
