@@ -11,7 +11,8 @@ import { RiListUnordered } from "react-icons/ri";
 
 function Biblioteca() {
 
-  const [width, setWidth] = useState(450);
+  const [minWidth, responsiveWidth, maxWidth, defaultWidth] = [72, 405, 875, 350];
+  const [width, setWidth] = useState(defaultWidth);
   const isResized = useRef(false);
 
   useEffect(() => {
@@ -23,7 +24,14 @@ function Biblioteca() {
       if (!isResized.current) {
         return
       }
-      setWidth((prevWidth) => prevWidth + e.movementX / 2)
+      setWidth((prevWidth) => {
+        const newWidth = prevWidth + e.movementX / 2;
+
+        const isInRange = newWidth >= minWidth && newWidth <= maxWidth;
+
+        return isInRange ? newWidth : prevWidth;
+      })
+
     })
   }, []);
 
@@ -47,7 +55,7 @@ function Biblioteca() {
           </div>
         </div>
 
-        <div className='flex space-x-12 h-9 mx-4 my-2'>
+        <div className='flex h-9 mx-4 my-2'>
           <div className='flex space-x-2 h-8'>
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Playlist</span></button>
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm'><span>Artistas</span></button>
@@ -55,10 +63,12 @@ function Biblioteca() {
             <button className='bg-[#2b2a2a] rounded-full px-3.5 text-sm whitespace-nowrap'><span>Podcast y programas</span></button>
           </div>
 
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center ml-auto' >
             <button className='p-2'><LuSearch size={20} /></button>
-            <button className='flex items-center justify-center pl-4 pr-3 py-2'><span className='text-sm'>Recientes</span><RiListUnordered size={20} className='ml-1' /> </button>
-
+            <button className='flex items-center justify-center pl-4 pr-3 py-2'>
+              <span className='text-sm'>Recientes</span>
+              <RiListUnordered size={20} className='ml-1' />
+            </button>
           </div>
 
         </div>
@@ -68,7 +78,7 @@ function Biblioteca() {
       {/*HANDLER */}
 
       <div className={`${isResized ? 'flex items-center justify-center opacity-0 transition-opacity duration-200 hover:opacity-100 w-2 active:cursor-grabbing hover:cursor-grab' :
-       'flex items-center justify-center w-2'}`}
+        'flex items-center justify-center w-2'}`}
 
 
         onMouseDown={() => { isResized.current = true }}>
