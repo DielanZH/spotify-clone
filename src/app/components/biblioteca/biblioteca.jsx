@@ -11,7 +11,7 @@ import { RiListUnordered } from "react-icons/ri";
 
 function Biblioteca() {
 
-  const [minWidth, responsiveWidth, maxWidth, defaultWidth] = [72, 405, 875, 350];
+  const [minWidth, responsiveWidth, maxWidth, defaultWidth] = [72, 405, 1200, 350];
   const [width, setWidth] = useState(defaultWidth);
   const isResized = useRef(false);
 
