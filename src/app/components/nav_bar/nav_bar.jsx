@@ -11,7 +11,7 @@ function Nav_bar() {
 
   return (
 
-    <div className='grid grid-cols-3 h-16 items-center'>
+    <div className='grid grid-cols-3 h-16 items-center font-spoti'>
 
       {/* Logo */}
       <div title="Spotify" className='flex sm:justify-start ml-7 -mt-0.5'>

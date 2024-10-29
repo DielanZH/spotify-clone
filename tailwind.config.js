@@ -8,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        spoti: ['var(--font-spotifymix-regular)'],
+        spotiBold:['var(--font-spotifymix-bold)'],
         roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
