@@ -6,21 +6,24 @@ import React, { useState, useEffect } from 'react';
 function Main_page() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-  // Actualiza el estado según el tamaño de la pantalla
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Considera pantallas menores a 768px como pequeñas
+      setIsSmallScreen(window.innerWidth < 768); // Pantallas pequeñas <768px
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Verifica el tamaño inicial
+    handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const divs = Array(10).fill(null).map((_, index) => (
     <div 
-      className={`relative p-3 g-4 ${isSmallScreen ? 'h-64' : 'h-48'} w-full bg-red-400 text-2xl rounded-lg overflow-hidden`}
+      className={`relative p-3 g-4 w-full bg-red-400 text-2xl rounded-lg overflow-hidden ${
+        isSmallScreen 
+          ? `max-w-[${maxContainerWidth}] min-w-[${minContainerWidth}]`
+          : `h-48`
+      } aspect-[3/4]`} // Aquí usamos la clase para una proporción 3:4
       key={index}
     >
       <h1>Lista de éxitos</h1>
@@ -30,6 +33,7 @@ function Main_page() {
         height={150}
         alt="Imagen de Ariana"
         className="absolute -right-9 top-12 rounded-md transform rotate-[18deg]"
+        priority
       />
     </div>
   ));
