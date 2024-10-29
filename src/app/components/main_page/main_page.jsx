@@ -39,11 +39,10 @@ function Main_page() {
   ));
 
   return (
-    <div className='bg-primaryColor rounded-lg p-4 max-h-[77vh]'>
-      <h2 className='mt-11 mb-4 text-2xl'>Explorar todo</h2>
-      <div className='grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 max-h-[61vh] overflow-y-auto overflow-x-hidden'>
-        {divs}
-      </div>
+    
+    <div className='bg-primaryColor rounded-lg p-4 max-h-[77vh] font-spotiBold'>
+      <h2 className='mt-11 mb-4 text-2xl font-spotiBold'>Explorar todo</h2>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 max-h-[61vh] overflow-y-auto overflow-x-hidden'>{divs}</div>
     </div>
   );
 }
