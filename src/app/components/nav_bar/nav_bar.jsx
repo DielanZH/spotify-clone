@@ -52,12 +52,12 @@ function Nav_bar() {
 
       </div>
 
-      <div className='flex justify-end space-x-8 px-1 '>
+      <div className='flex justify-end space-x-8 px-1 font-spotiBold'>
         <button className='text-[#B3B3B3] transition-transform duration-75 hover:scale-110 hover:text-white min-h-3 min-w-3'>
           Registrarte
         </button>
         <button className='text-[#121212] rounded-full py-3 px-8 bg-white transition-transform duration-75 hover:scale-105 min-h-2 min-w-2'>
-          Iniciar Sesión
+          Iniciar sesión
         </button>
       </div>
 
