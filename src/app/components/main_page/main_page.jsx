@@ -21,9 +21,9 @@ function Main_page() {
     <div 
       className={`relative p-3 g-4 w-full bg-red-400 text-2xl rounded-lg overflow-hidden ${
         isSmallScreen 
-          ? `max-w-[${maxContainerWidth}] min-w-[${minContainerWidth}]`
-          : `h-48`
-      } aspect-[3/4]`} // Aquí usamos la clase para una proporción 3:4
+          ? 'aspect-[5/4] max-w-[80%] min-w-[60%]' // Aspecto para pantallas pequeñas
+          : 'aspect-[5/3]' // Aspecto para pantallas grandes
+      }`} 
       key={index}
     >
       <h1>Lista de éxitos</h1>
@@ -39,10 +39,11 @@ function Main_page() {
   ));
 
   return (
-    
     <div className='bg-primaryColor rounded-lg p-4 max-h-[77vh] font-spotiBold'>
       <h2 className='mt-11 mb-4 text-2xl font-spotiBold'>Explorar todo</h2>
-      <div className='grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 max-h-[61vh] overflow-y-auto overflow-x-hidden'>{divs}</div>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-6 max-h-[61vh] overflow-y-auto overflow-x-hidden'>
+        {divs}
+      </div>
     </div>
   );
 }
