@@ -56,6 +56,7 @@ function LibraryNotLogged() {
 
                 <div className='mx-2 mt-5 rounded-md bg-secondaryColor select-none font-spoti'>
                     <div className='p-4 space-y-5 '>
+
                         <div className='space-y-2'>
                             <p className='font-spotiBold text-white text-md'>Crea tu primera playlist</p>
                             <p className='text-sm text-white'>¡Es muy fácil! Te vamos a ayudar</p>
@@ -63,6 +64,31 @@ function LibraryNotLogged() {
 
                         <button className=' px-4 py-1.5 rounded-full bg-white text-primaryColor text-sm font-spotiBold'>Crear playlist</button>
                     </div>
+                </div>
+
+                <div className='mx-2 mt-5 rounded-md bg-secondaryColor select-none font-spoti'>
+                    <div className='p-4 space-y-5 '>
+
+                        <div className='space-y-2'>
+                            <p className='font-spotiBold text-white text-md'>Busquemos algunos podcasts para seguir</p>
+                            <p className='text-sm text-white'>Te mantendremos al tanto de los nuevos episodios.</p>
+                        </div>
+
+                        <button className=' px-4 py-1.5 rounded-full bg-white text-primaryColor text-sm font-spotiBold'>Explorar podcasts</button>
+                    </div>
+                </div>
+
+                <div className='bg-red-500 relative p-5'>
+
+                    <div className='text-xs grid grid-cols-[repeat(auto-fill,minmax(8rem,1fr))] gap-2 overflow-hidden'>
+                        <p>Legal</p>
+                        <p>Seguridad y Centro de Privacidad</p>
+                        <p>Politica de Privacidad</p>
+                        <p>Cookies</p>
+                        <p>Sobre los anuncios</p>
+                        <p>Accesibilidad</p>
+                    </div>
+
                 </div>
 
             </div>
