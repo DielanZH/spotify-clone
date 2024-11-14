@@ -27,14 +27,16 @@ function Main_page() {
       key={index}
     >
       <h1>Lista de éxitos</h1>
-      <Image
-        src="/images/ariana.jpg"
-        width={150} 
-        height={150}
-        alt="Imagen de Ariana"
-        className="absolute -right-9 top-12 rounded-md transform rotate-[18deg]"
-        priority
-      />
+      <div className="absolute -right-9 top-12 w-[50%] h-auto transform rotate-[30deg]">
+        <Image
+          src="/images/ariana.jpg"
+          width={500} // Valor alto para resolución; se escalará con CSS
+          height={500}
+          alt="Imagen de Ariana"
+          className="rounded-md w-full h-auto" // w-full y h-auto hacen que la imagen se adapte al contenedor
+          priority
+        />
+      </div>
     </div>
   ));
 
