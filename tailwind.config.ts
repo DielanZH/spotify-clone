@@ -8,11 +8,21 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        spoti: ['var(--font-spotifymix-regular)'],
+        spotiBold: ['var(--font-spotifymix-bold)'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryColor: "#121212",
+        secondaryColor: "#212121",
+        chipCheckbox: "#2a2a2a",
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
+
